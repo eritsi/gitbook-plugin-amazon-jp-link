@@ -22,9 +22,7 @@ module.exports = {
         if (!size) { size = 150; }
         const imageSize = parseInt(size, 10) * 2;
 
-        const body = `<img border="0" src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;ASIN=${
-                    asin}&amp;Format=_SL${imageSize}_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822` +
-                    `&amp;WS=1&amp;tag=${tag}" width="${size}" style="float: left; margin: 0 20px 20px 0;" />`;
+        const body = `<img border="0" src="https://m.media-amazon.com/images/P/${asin}._SL${imageSize}_.jpg" width="${size}" style="max-width:${size}px;">`;
 
         return renderAmazonJpLink(asin, tag, body);
       },
